@@ -60,26 +60,22 @@ body{
         display: flex;
         flex-direction: row;
         &:nth-child(2){
-            border-top: 2px solid #F7F7F7;
-            border-bottom: 2px solid #F7F7F7;
+            border-top: 2px solid #f7f7f752;
+            border-bottom: 2px solid #f7f7f752;
         }
     }
 
     &__cell {
+        color: #F7F7F7;
         position: relative;
         flex: 1 1 auto;
         height: 265px;
-        transition: all 1s linear;
         cursor: pointer;
         &:first-child{
-            border-right: 2px solid #F7F7F7;
+            border-right: 2px solid #f7f7f752;
         }
         &:last-child{
-            border-left: 2px solid #F7F7F7;
-        }
-        &:hover{
-            background-color: red;
-            transition: all 0.5s linear;
+            border-left: 2px solid #f7f7f752;
         }
     }
 }
