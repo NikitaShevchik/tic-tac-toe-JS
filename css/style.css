@@ -91,15 +91,27 @@ body {
 
 .header__text {
   font-size: 16px;
-  padding: 20px 0;
+  padding: 10px 0;
   line-height: 1.4;
   color: #F7F7F7;
+  text-align: center;
 }
 
 .content {
   font-family: 'Roboto', sans-serif;
   max-width: 840px;
   margin: 0 auto;
+}
+
+.main__result {
+  display: none;
+  padding: 20px 0;
+}
+
+.main__winner {
+  font-size: 20px;
+  color: #F7F7F7;
+  text-align: center;
 }
 
 .tictac__game {
@@ -191,4 +203,16 @@ body {
   border-radius: 50%;
   width: 90%;
   height: 90%;
+}
+
+.main__tictac._win {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0.3;
+}
+
+.main__result._show {
+  display: block;
 }
