@@ -41,9 +41,14 @@ body{
 .main {
 
     &__body {
+        width: 100%;
     }
 
     &__tictac {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__result {
         display: none;
@@ -54,10 +59,10 @@ body{
         font-size: 20px;
         color: #F7F7F7;
         text-align: center;
+        transition: all 0.5s linear;
     }
 }
 .tictac {
-
     &__game {
         height: 800px;
         width: 100%;
@@ -79,7 +84,7 @@ body{
     &__cell {
         color: #F7F7F7;
         position: relative;
-        flex: 1 1 auto;
+        width: 100%;
         height: 265px;
         cursor: pointer;
         &:first-child{
@@ -132,9 +137,88 @@ body{
 
 .main__tictac._win{
     user-select: none;
-    opacity: 0.3;
+    opacity: 0.5;
+    transition: all 0.3s linear;
+    transform: translate(0, 0) scale(0.5);
+    height: 400px;
 }
 
 .main__result._show{
     display: block;
+}
+
+@media (max-width: 800px) {
+    .content {
+        max-width: 602px;
+    }
+    .tictac__cell{
+        height: 200px;
+    }
+    .main__tictac._win{
+        transform: translate(0, 15%) scale(0.5);
+        height: 300px;
+    }
+}
+
+@media (max-width: 620px) {
+    .content {
+        max-width: 452px;
+    }
+    .tictac__cell{
+        height: 150px;
+    }
+    .header__text{
+        font-size: 12px;
+        line-height: 1;
+    }
+    .header{
+        padding: 15px 0 5px 0;
+    }
+    .header__title{
+        font-size: 14px;
+    }
+    .main__tictac._win{
+        transform: translate(0, 40%) scale(0.5);
+        height: 220px;
+    }
+    .main__winner{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        max-width: 362px;
+    }
+    .tictac__cell{
+        height: 120px;
+    }
+    .main__tictac._win{
+        transform: translate(0, 60%) scale(0.5);
+        height: 180px;
+    }
+}
+@media (max-width: 380px) {
+    .content {
+        max-width: 272px;
+    }
+    .tictac__cell{
+        height: 90px;
+    }
+    .main__tictac._win{
+        transform: translate(0, 90%) scale(0.5);
+        height: 140px;
+    }
+}
+@media (max-width: 280px) {
+    .content {
+        max-width: 152px;
+    }
+    .tictac__cell{
+        height: 50px;
+    }
+    .main__tictac._win{
+        transform: translate(0, 225%) scale(0.7);
+        height: 100px;
+    }
 }

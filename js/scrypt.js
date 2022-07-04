@@ -4,6 +4,7 @@ const tictacField = document.querySelectorAll('.tictac__cell');
 const tictacBoard = document.querySelector('.main__tictac');
 const resultShow = document.querySelector('.main__result');
 const winnerField = document.querySelector('.main__winner');
+const headerText = document.querySelector('.header__text');
 
 
 const winCombinations = [
@@ -60,6 +61,7 @@ function tictacGame() {
                 tictacBoard.classList.add('_win');
                 resultShow.classList.add('_show');
                 winnerField.innerHTML = `Победила дружба! (ничья)`;
+                headerText.innerHTML = `Крестики и нолики, красаучики!`
             }
         })
     }
@@ -85,9 +87,11 @@ function tictacGame() {
         if (i % 2 == 0) {
             resultShow.classList.add('_show');
             winnerField.innerHTML = `Победили кружки!`;
+            headerText.innerHTML = `Кружки, красаучики!`
         } else {
             resultShow.classList.add('_show');
             winnerField.innerHTML = `Победили крестики!`;
+            headerText.innerHTML = `Крестики, красаучики!`
         }
     }
     function ifDraw() {
